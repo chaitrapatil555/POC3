@@ -1,0 +1,39 @@
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+</head>
+<body>
+<table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Fname</th>
+            <th>Lname</th>
+            <th>Dob</th>
+            <th>Doj</th>
+            <th>mob</th>
+            <th>pincode</th>
+            <th>Delete</th>
+            <th>Action</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users ">
+            <td>{{user.id}}</td>
+            <td>{{user.fname}}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.dob}}</td>
+            <td>{{user.joiningDate}}</td>
+            <td>{{user.mobileNo}}</td>
+            <td>{{user.pincode}}</td>
+            <td>{{user.deleted}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delteUser(user.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+            <td class="text-center"><button class="glyphicon-pencil" (click)="updateDetails(user.id)"><a [routerLink]="['/update',user.id]"> Update</a></button></td>
+        </tr>
+    </tbody>
+</table>
+</body>

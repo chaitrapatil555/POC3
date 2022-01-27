@@ -1,0 +1,65 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <h1>Register Here!!!</h1>
+
+                    <div class="form-group">
+                        <label for="firstname"><span class="req">* </span> First Name:  </label>
+                        <input required type="text" [(ngModel)]="user.fname" name="fname" id="fname"
+                            class="form-control phone" maxlength="28" placeholder="Enter your firstname..." />
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="firstname"><span class="req">* </span> Surname: </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.surname" name="surname" id="surname" required
+                            placeholder="Enter Surname" />
+                        <div id="errFirst"></div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="lastname"><span class="req">* </span> DOB : </label>
+                        <input class="form-control" type="date" [(ngModel)]="user.dob" name="dob" id="const {propertyName} = objectToDestruct;"
+                            placeholder="Total year of experience" required />
+                        <div id="errLast"></div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> Joiningdate: </label>
+                        <input class="form-control" required type="date" [(ngModel)]="user.joiningDate" name="joiningDate"
+                            id="joiningDate" placeholder="Enter joining date" />
+                        <div class="status" id="status"></div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span>MobileNo: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.mobileNo" name="mobileNo"
+                            id="email" placeholder="Enter phone no" />
+                        <div class="status" id="status"></div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span>Pincode: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.pincode" name="pincode"
+                            id="email" placeholder="Enter pincode" />
+                        <div class="status" id="status"></div>
+                    </div><br>
+                    <div class="form-group">
+                        <input class="btn btn-primary" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+
